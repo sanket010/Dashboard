@@ -5,6 +5,7 @@ import Navbar from './components/Navbar/Navbar'
 import SideNav from './components/SideNav/SideNav'
 import Footer from './components/Footer/Footer'
 
+
 function App() {
   const [count, setCount] = useState(0)
 
@@ -15,7 +16,8 @@ function App() {
       <SideNav />
       <div className="flex flex-col  w-full">
         <Navbar />
-        <div><Dashboard/></div>
+        <div><Dashboard/>
+        </div>
         <div className=''><Footer /></div>
         
       </div>
