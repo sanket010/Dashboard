@@ -1,4 +1,4 @@
-import React from 'react'
+
 import Ellipse from '../../assets/home/Ellipse.png'
 import { GrNewWindow } from "react-icons/gr";
 import { MdDashboard } from "react-icons/md";
@@ -6,8 +6,13 @@ import { LuFolderCog } from "react-icons/lu";
 import { FaRegUser } from "react-icons/fa6";
 import { IoSettingsOutline } from "react-icons/io5";
 import { TbLogout } from "react-icons/tb";
+import {Link} from "react-router-dom"
+import { useState } from "react";
+
 
 export default function SideNav() {
+  const [isNewOpen, setIsNewOpen] = useState(false);
+
   return (
     <aside className="bg-blue-950 text-white w-64 min-h-screen py-6  px-3">
     <div className="mb-40">
@@ -15,32 +20,65 @@ export default function SideNav() {
       </div>
 
     <ul>
-      <li className="mb-2 bg-yellow-600">
-        <a href="#" className="flex items-center py-2 px-4 gap-5 text-xl rounded hover:bg-blue-800">
+      <li className="mb-2   ">
+        <Link to='/' className="flex items-center py-2 px-4 gap-5 text-xl rounded hover:bg-yellow-600">
           <span><MdDashboard /></span>
           Dashboard
-        </a>
+        </Link>
       </li>
-      <li className="mb-2">
-        <a href="#" className="flex items-center py-2 px-4 gap-5 text-xl rounded hover:bg-blue-800">
+      
+      <div>
+        <button 
+          className="w-full flex items-center justify-between p-2 bg-bg-blue-950 hover:bg-yellow-600 text-White font-bold rounded-md"
+          onClick={() => setIsNewOpen(!isNewOpen)}
+        >
+          <div className="flex items-center space-x-2">
           <span><GrNewWindow /></span>
-          New
-        </a>
-      </li>
-      <li className="mb-2">
-        <a href="#" className="flex items-center py-2 px-4 gap-5 text-xl rounded hover:bg-blue-800">
+            <span>New</span>
+          </div>
+          <span>{isNewOpen ? "▲" : "▼"}</span>
+        </button>
+        {isNewOpen && (
+          <div className="pl-6 mt-2 space-y-2">
+            <div className="flex items-center space-x-2 cursor-pointer hover:text-yellow-600">
+              
+              <Link to='/headline'><button>Post New Headline</button></Link>
+            </div>
+            <div className="flex items-center space-x-2 cursor-pointer hover:text-yellow-600">
+             
+              <button>Post New Article/Post</button>
+            </div>
+            <div className="flex items-center space-x-2 cursor-pointer hover:text-yellow-600">
+             
+              <button>Post Video</button>
+            </div>
+          </div>
+        )}
+      </div>
+
+
+
+
+
+
+
+
+
+
+      <li className="mb-2 ">
+        <a href="#" className="flex items-center py-2 px-4 gap-5 text-xl rounded hover:bg-yellow-600">
          <span><LuFolderCog /></span>
-          Management
+           manage
         </a>
       </li>
-      <li className="mb-2">
-        <a href="#" className="flex items-center py-2 px-4 gap-5 text-xl rounded hover:bg-blue-800">
+      <li className="mb-2 ">
+        <a href="#" className="flex items-center py-2 px-4 gap-5 text-xl rounded hover:bg-yellow-600">
           <span><FaRegUser /></span>
           Profile
         </a>
       </li>
-      <li className="mb-2">
-        <a href="#" className="flex items-center py-2 px-4 gap-5 text-xl rounded hover:bg-blue-800">
+      <li className="mb-2 ">
+        <a href="#" className="flex items-center py-2 px-4 gap-5 text-xl rounded hover:bg-yellow-600">
           <span><IoSettingsOutline /></span>
           Setting
         </a>
