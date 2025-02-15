@@ -29,12 +29,12 @@ export default function SideNav() {
       
       <div>
         <button 
-          className="w-full flex items-center justify-between p-2 bg-bg-blue-950 hover:bg-yellow-600 text-White font-bold rounded-md"
+          className="w-full flex items-center justify-between p-2 bg-bg-blue-950 hover:bg-yellow-600 text-White  rounded-md"
           onClick={() => setIsNewOpen(!isNewOpen)}
         >
-          <div className="flex items-center space-x-2">
+          <div className="flex items-center ml-2 space-x-6">
           <span><GrNewWindow /></span>
-            <span>New</span>
+            <span >New</span>
           </div>
           <span>{isNewOpen ? "▲" : "▼"}</span>
         </button>

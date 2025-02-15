@@ -3,7 +3,7 @@ import Photocover from "../../assets/images/cover.png"
 
 export default function headline() {
     return(
-        <div className=" flex flex-col bg-grey-100     bg-gray-100 ">
+        <div className=" flex flex-col bg-grey-100   overflow-hidden   bg-gray-100 ">
         <div className="black   font-bolder flex flex-row justify-start items-center mt-10 w-100">
             <header className=" ml-20 text-black text-2xl font-bold">Create New Headline</header>
             
@@ -48,7 +48,7 @@ export default function headline() {
         <label className="block text-gray-700 font-semibold mb-2">Schedule Posting Time</label>
         <div className="relative">
             <span className="absolute inset-y-0 left-3 flex items-center text-gray-500">
-                10AM
+            🕛
             </span>
             <input type="Time" className="w-full pl-10 pr-3 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-gray-700"/>
         </div>
@@ -56,7 +56,7 @@ export default function headline() {
 
          
               </div>
-              <div><button className="bg-gradient-to-b from-[#10104F] to-[#08082F] text-white px-6 w-[500px] py-2 rounded-lg border border-blue-500 shadow-lg hover:scale-105 transition w-64 mt-20 ml-64 ">
+              <div><button className="bg-gradient-to-b from-[#10104F] to-[#08082F] text-white px-6 py-2 rounded-lg border border-blue-500 shadow-lg hover:scale-105 transition w-[500px] mt-20 ml-64 ">
         Post Headline
     </button></div>
 
